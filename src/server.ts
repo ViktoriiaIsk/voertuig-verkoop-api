@@ -19,15 +19,21 @@ app.use("/api/voertuig", voertuigRoutes);
 app.all("*", notFound);
 
 // Database connection
-try {
-  await mongoose.connect(process.env.MONGO_URI!);
-  console.log("Database connection OK");
-} catch (err) {
-  console.error(err);
-  process.exit(1);
+// Database connection
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.MONGO_URI!);
+    console.log("Database connection OK");
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
 }
 
-// Server Listening
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}! 🚀`);
+connectDB().then(() => {
+  // Server Listening
+  app.listen(PORT, () => {
+    console.log(`🚀 Server listening on port ${PORT}!`);
+  });
 });
+
