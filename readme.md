@@ -1,15 +1,71 @@
-# 🚗 Voertuig Verkoop API
+# Node, Express and TypeScript Project Template
 
-The **Voertuig Verkoop API** is a RESTful API designed for managing vehicles (**cars and motorcycles**).  
-It supports **CRUD operations** (Create, Read, Update, Delete) and stores data in **MongoDB**.
+Welcome to the **Node, Express and TypeScript Project Template**! This repository serves as a starter template for building Node.js applications with TypeScript. It comes pre-configured with models, controllers, routes, and bundling, so you can focus on building your application.
+
+## Features
+
+- **TypeScript**: Strongly typed language for writing robust and maintainable code.
+- **Project Structure**: Organized folder structure with models, controllers, and routes.
+- **Bundling pkgroll**: Pre-configured with a bundler for efficient builds.
+- **TSX**: For automatic server restarts an running typescript during development.
+- **Dependency Management**: Configured with npm.
+
+## Project Structure
+
+```
+├── src
+│   ├── controllers
+│   │   └── exampleController.ts
+│   ├── middleware
+│   │   └── exampleMiddleware.ts
+│   ├── models
+│   │   └── exampleModel.ts
+│   ├── routes
+│   │   └── exampleRoutes.ts
+│   └── server.ts    // Main entry point of the application
+├── dist             // Compiled output (auto-generated)
+├── package.json     // Project dependencies and scripts
+├──.gitignore        // Ignore files to github
+├── tsconfig.json    // TypeScript configuration
+└── README.md        // Project documentation
+```
+
+## Getting Started
+
+### 1. Start Development Server
+
+Run the development server with hot-reloading:
+
+```bash
+npm run dev
+```
+
+### 2. Build the Project
+
+Compile TypeScript files to JavaScript:
+
+```bash
+npm run build
+```
+
+### 3. Start the Production Server
+
+After building the project, start the server:
+
+```bash
+npm start
+```
+
+## Scripts
+
+- `dev`: Starts the development server with hot-reloading.
+- `build`: Compiles the TypeScript source code to JavaScript.
+- `start`: Starts the production server.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🚀 Features:
-✔️ Add, delete, and update cars and motorcycles  
-✔️ Filter by vehicle type (`auto` or `moto`)  
-✔️ User authentication (registration, login, favorites)  
-✔️ Secure password storage using bcrypt  
-✔️ Input validation  
-
----
+Happy coding! 🎉
